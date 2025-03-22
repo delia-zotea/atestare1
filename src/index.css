@@ -3,3 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+.selected-image {
+    width: 24rem;
+    height: 24rem;
+    object-fit: cover;
+    border: 8px solid #f54c90;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .image-list img {
+    width: 6rem;
+    height: 6rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  @media (max-width: 640px) {
+    .selected-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .image-list img {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
